@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Security.Cryptography;
+using System.Transactions;
 
 namespace ConsoleApp1
 {
@@ -6,9 +8,33 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Miles per gallon");
-            double mpg = 500 / 27.0;
-            Console.WriteLine("you got " + mpg + " mpg.");
+            int miles = 0;
+            double gallons = 0.0;
+            double mpg;
+            string temp;
+            //read in the miles
+            miles = getInt("Enter miles:");
+            //read in the gallons
+            Console.WriteLine("Enter Gallons):");
+            temp = Console.ReadLine();
+            gallons = double.Parse(temp);
+            //compute mpg
+            mpg = miles / gallons;
+            Console.WriteLine("You Got " + mpg + " mpg");
+
+
+
+        }
+
+        public static int getInt(string prompt)
+        {
+            string temp;
+            int value;
+            Console.WriteLine(prompt);
+            temp = Console.ReadLine();
+            value = Int32.Parse(temp);
+            return value;
+
         }
     }
 }
