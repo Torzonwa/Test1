@@ -6,8 +6,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test, Test, Test!");
-            int Test;
+            Console.WriteLine("Miles per gallon");
+            double mgp = 500 / 27.0;
+            Conslole.WriteLine("you got " + mpg + " mpg.");
         }
     }
 }
